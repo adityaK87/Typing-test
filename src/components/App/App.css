@@ -1,0 +1,15 @@
+body{
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "poppins" , sans-serif;
+}
+
+
+.App {
+  display: flex;
+  flex-direction:column ;
+  background-color: #262a2b;
+}
+
+
