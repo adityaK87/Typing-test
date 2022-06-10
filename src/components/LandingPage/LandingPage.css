@@ -1,0 +1,40 @@
+.LandingPage-container{
+    display: flex;
+    min-height: 70vh ;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee2ee ;
+    padding: 0 32px;
+    font-family: "Bangers", cursive;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.Landing-header{
+    font-size: 80px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+.typewriter-container{
+    font-size: 34px;
+    letter-spacing: 4px;
+
+}
+.flash-img{
+    width: 40vh;
+}
+
+@media( max-width:995px) {
+    .LandingPage-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Landing-header{
+        margin: 20px;
+        text-align: center;
+    }
+    .typewriter-container{
+        text-align: center;
+    }
+
+}
