@@ -1,0 +1,18 @@
+.test-container{
+    background-color: #fff;
+    margin: 55px 0px;
+    width: 80%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0 , 0 , 0 ,0.12) , 0 1px 3px rgba(0 , 0 , 0 ,0.12)  ;
+    margin-left: 10%;
+ }
+
+ .try-again-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     flex-grow: 1;
+     /* text-align: center; */
+ }
