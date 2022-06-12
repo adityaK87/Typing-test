@@ -10,7 +10,7 @@ const LandingPage = () => {
         <div className="LandingPage-left">
             <h1 className='Landing-header'>Can you type...</h1>
             <div className="typewriter-container">
-     <Typewriter
+     <Typewriter //This typewriter is used to animate the [Fast?,Correct?,Quick?]
          options={{
             strings: ['Fast?', 'Correct?','Quick?'],
             autoStart: true,
