@@ -17,3 +17,4 @@ const ChallengeSection = () => {
 }
 
 export default ChallengeSection;
+// This challengeSection component or function is the child component of app.jsx or app component 
