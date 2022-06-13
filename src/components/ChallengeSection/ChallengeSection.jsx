@@ -2,7 +2,14 @@ import React from 'react';
 import TestContainer from '../TestContainer/TestContainer';
 import './ChallengeSection.css'
 
-const ChallengeSection = () => {
+const ChallengeSection = ({
+    selectedParagraph,  
+    words, 
+    characters,
+    wpm,
+    timeRemaining ,
+    timeStarted}) => {
+    console.log(selectedParagraph);
 
     return(
 
@@ -10,11 +17,16 @@ const ChallengeSection = () => {
             <h1 data-aos="fade-down" className='challenge-section-header'>
                 Take a Typing-Test Now!!
             </h1>
-            <TestContainer words={4} characters={14} wpm={2} /> 
+            <TestContainer 
+            selectedParagraph={selectedParagraph} 
+            timeRemaining={timeRemaining} 
+            timeStarted={timeStarted } 
+            words={words} 
+            characters={characters} 
+            wpm={wpm} /> 
         </div>
     ); 
 
 }
 
 export default ChallengeSection;
-// This challengeSection component or function is the child component of app.jsx or app component 
