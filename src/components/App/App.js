@@ -17,20 +17,35 @@ class App extends React.Component{
     timeRemaining: totalTime,
     words:0,
     characters:0,
-    wpm:0
+    wpm:0,
+    testInfo:[]
 }
 
-componentDidMount(){
-  fetch(paraURL)
-   .then((response)=>response.text())
-   .then((data)=>{//console.log(data);
-    this.setState({selectedParagraph:data})
+  componentDidMount(){
+    // fetch(paraURL)
+    // .then((response)=>response.text())
+    // .then((data)=>{//console.log(data);
+    //   this.setState({selectedParagraph:data})
+    // });
+
+    const selectedParagraphArray = this.state.selectedParagraph.split("")
+    // console.log( "splitted para -",selectedParagraphArray)
+    const testInfo = selectedParagraphArray.map((selectedLetter)=>{
+      return {
+        testLetter:selectedLetter,
+        status:"notAttempted",
+      };
+    })
+    this.setState({testInfo})
   }
-  );
-  this.setState({timeRemaining:30})
-}
+
+   handleUserInput = (inputValue) => {
+    console.log(inputValue) 
+
+   }
+
     render(){
-      console.log("Render Method is called");
+      console.log("Test Info -", this.state.testInfo);
    // This is used for fetching data from api by  using async await     
       // async function fetchParagraph(){
       //   try {
@@ -59,6 +74,9 @@ componentDidMount(){
          wpm = {this.state.wpm }
          timeRemaining = {this.state.timeRemaining}
          timeStarted = {this.state.timeStarted}
+         testInfo={this.state.testInfo}
+         onInputChange={this.handleUserInput}
+
          />
 
 
