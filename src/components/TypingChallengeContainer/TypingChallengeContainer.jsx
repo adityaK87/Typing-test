@@ -1,39 +1,49 @@
 import React from 'react';
-import ChallengeDetailsCard from '../ChallengeDetailsCard/ChallengeDetailsCard';
-import TypingChallenge from '../TypingChallenge/TypingChallenge';
-import './TypingChallengeContainer.css'
+import TestLetter from '../TestLetter/TestLetter';
+import './TypingChallenge.css';
 
-const TypingChallengeContainer = ({
-    selectedParagraph,  
-    words, 
-    characters,
-    wpm,
-    timeRemaining ,
-    timeStarted}) => {
-        return(
-            <div className="Typing-challenge-container">
-                    {/* details section */}
-                        <div className="details-container">
-
-                            {/* words typed */}
-                            <ChallengeDetailsCard cardName="Words" cardValue = {words}/>
-
-                            {/* character typed */}
-                            <ChallengeDetailsCard cardName="Characters" cardValue = {characters}/>
-
-                            {/* speed */}
-                            <ChallengeDetailsCard cardName="Speed" cardValue = {wpm}/>
-                      
-                        </div>
-                    {/* The real challenge */}
-                    <div className="typeWriter-container">
-                        <TypingChallenge
-                         timeStarted=  {timeStarted}
-                        timeRemaining={timeRemaining}                        
-                         selectedParagraph={selectedParagraph}/>
-                    </div>
+const TypingChallenge = ({
+    // selectedParagraph,
+    timeStarted,
+    timeRemaining,
+    testInfo,
+    onInputChange}) => {
+    console.log("inside typing challenge -",testInfo)
+    return (
+    <div className='typing-cahallege'>
+        <div className="timer-section">
+            <p className="timer">00:
+            {
+             timeRemaining >=10 ?timeRemaining:`0${timeRemaining}`
+            }</p>
+            <p className="timer-info">{!timeStarted && "Start Typing"}</p>
+        </div>
+        <div className="textarea-container">
+            <div className="textarea-left">
+                 <div className="textarea test-paragraph">
+                    {/* {selectedParagraph} */}
+                    {testInfo.map((individualLetterInfo,index)=>{
+                        return(
+                             <TestLetter
+                             key={index}
+                              individualLetterInfo={individualLetterInfo} />
+                        )
+                    })}
+                 </div>
             </div>
-        );
+            <div className="textarea-right">
+             <textarea
+              onChange={(e)  => onInputChange(e.target.value)}
+              className='textarea'
+             placeholder='Start Typing Here' 
+             ></textarea>
 
+            </div>
+        </div>
+    </div>
+    );
 }
-export default TypingChallengeContainer;
+ 
+export default TypingChallenge;
+
+// This is the child component of TypingChallengeContainer.jsx  
