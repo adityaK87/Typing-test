@@ -11,7 +11,8 @@ const TestContainer = ({
     timeRemaining ,
     timeStarted,
     testInfo,
-    onInputChange}) => {
+    onInputChange,
+    startAgain }) => {
     
     return(
         <div className="test-container">
@@ -25,6 +26,7 @@ const TestContainer = ({
                timeRemaining={timeRemaining}
                testInfo={testInfo}
                onInputChange={onInputChange}
+              
                 />
         </div>
         ):(
@@ -35,6 +37,7 @@ const TestContainer = ({
                words={words}
                characters={characters} 
                wpm={wpm}
+               startAgain={startAgain }
               
                />
             </div> 
