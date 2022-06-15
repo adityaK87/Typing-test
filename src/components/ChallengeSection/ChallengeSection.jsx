@@ -8,7 +8,10 @@ const ChallengeSection = ({
     characters,
     wpm,
     timeRemaining ,
-    timeStarted}) => {
+    timeStarted,
+    testInfo,
+    onInputChange,
+    startAgain }) => {
     console.log(selectedParagraph);
 
     return(
@@ -23,7 +26,11 @@ const ChallengeSection = ({
             timeStarted={timeStarted } 
             words={words} 
             characters={characters} 
-            wpm={wpm} /> 
+            wpm={wpm}
+            testInfo={testInfo} 
+            onInputChange={onInputChange}
+            startAgain = {startAgain} 
+            /> 
         </div>
     ); 
 
