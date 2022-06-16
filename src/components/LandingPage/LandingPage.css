@@ -20,8 +20,8 @@
     letter-spacing: 4px;
 
 }
-.flash-img{
-    width: 40vh;
+.typing-img{
+    width: 50vh;
 }
 
 @media( max-width:995px) {
@@ -37,4 +37,9 @@
         text-align: center;
     }
 
+}
+@media( max-width:437px){
+    .typing-img{
+        width: 30vh;
+    } 
 }
