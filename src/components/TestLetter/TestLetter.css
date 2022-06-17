@@ -1,6 +1,6 @@
 .test-letter{
-    font-size: 19px;
-    line-height:19px ;
+    font-size: 18px;
+    line-height:20px ;
 }
 
 .test-letter-correct{
@@ -12,4 +12,92 @@
  
 .test-letter-not-attempted{
     color: rgb(242, 164, 19);
+}
+@media only screen and  (max-width:1000px) {
+    
+    .test-letter{
+        font-size: 17px;
+        line-height:18px ;
+    }
+}
+@media only screen and  (max-width:775px) {
+    
+    .test-letter{
+        font-size: 16px;
+        line-height:17px ;
+    }
+}
+
+@media only screen and  (max-width:700px) {
+    
+    .test-letter{
+        font-size: 15px;
+        line-height:16px ;
+    }
+}
+
+@media only screen and  (max-width:619px) {
+    
+    .test-letter{
+        font-size: 14px;
+        line-height:15px ;
+    }
+}
+
+@media only screen and  (max-width:550px) {
+    
+    .test-letter{
+        font-size: 13px;
+        line-height:14px;
+    }
+}
+@media only screen and  (max-width:485px) {
+    
+    .test-letter{
+        font-size: 12px;
+        line-height:13px;
+    }
+}
+@media only screen and  (max-width:445px) {
+    
+    .test-letter{
+        font-size: 11px;
+        line-height:12px;
+    }
+}
+@media only screen and  (max-width:375px) {
+    
+    .test-letter{
+        font-size: 10px;
+        line-height:11px;
+    }
+}
+@media only screen and  (max-width:350px) {
+    
+    .test-letter{
+        font-size: 9px;
+        line-height:10px;
+    }
+}
+@media only screen and  (max-width:322px) {
+    
+    .test-letter{
+        font-size: 8px;
+        line-height:9px;
+    }
+}
+@media only screen and  (max-width:296px) {
+    
+    .test-letter{
+        font-size: 7px;
+        line-height:8px;
+    }
+}
+
+@media only screen and  (max-width:264px) {
+    
+    .test-letter{
+        font-size: 6px;
+        line-height:7px;
+    }
 }
