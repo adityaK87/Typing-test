@@ -7,7 +7,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             className='footer-link'
-             href="https://github.com/adityapal87/Typing-test">visit the code of this App </a>
+             href="https://github.com/adityapal87/Typing-test">Get Code</a>
 
         </div>
     );
