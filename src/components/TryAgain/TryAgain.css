@@ -22,7 +22,7 @@
     border: none;
     border-radius: 4px;
     color: #fff;
-    background-color: #2059af;
+    background-color: #3f8199;
     min-width: 64px;
     padding: 2px 12px;
     vertical-align: middle;
@@ -34,5 +34,5 @@
 }
 
 .start-again-button:hover{
-    background-color: #54c5ba;
+    background-color: #5d97ac;
 }
