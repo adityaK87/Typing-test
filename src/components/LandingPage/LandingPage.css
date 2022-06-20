@@ -24,6 +24,9 @@
     width: 50vh;
     margin-top: 12px;
 }
+@media (max-width:750) {
+    
+}
 
 @media( max-width:995px) {
     .LandingPage-container{
@@ -39,13 +42,46 @@
     }
 
 }
-@media( max-width:470px){
+@media (max-width:750px) {
     .typing-img{
-        width: 35vh;
-    } 
-}
-@media( max-width:500px){
-    .Landing-header{
-        font-size: 60px;
+        width: 40vh;
     }
 }
+@media( max-width:620px){
+    .typing-img{
+        width: 35vh;
+        margin-bottom: 50px;
+    } 
+} 
+
+@media( max-width:550px){
+    .Landing-page-left{
+        font-size: 60px;
+        margin-top: 10px;
+    }
+    .typing-img{
+        width: 30vh;
+        margin-bottom:44%;
+    }
+} 
+
+@media( max-width:470px){
+    .Landing-page-left{
+        font-size: 50px;
+        margin-top: 10%;
+    }
+    .typing-img{
+        width: 25vh;
+        margin-bottom:70%;
+    }
+} 
+@media( max-width:375px){
+    .Landing-page-left{
+        font-size: 50px;
+        margin-top: 15%;
+    }
+    .typing-img{
+        width: 20vh;
+        margin-bottom:70%;
+    }
+} 
