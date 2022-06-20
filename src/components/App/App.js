@@ -4,13 +4,14 @@ import Navbar from '../Navbar/Navbar';
 import './App.css';
 import Footer from '../Footer/Footer';
 import ChallengeSection from '../ChallengeSection/ChallengeSection';
+import { SAMPLE_PARAGRAPHS } from './../../data/SampleParagraph';
 // import axios from 'axios';
 
-const paraURL="http://metaphorpsum.com/paragraphs/1/10"
+const paraURL="http://metaphorpsum.com/paragraphs/1/9"
  
 const totalTime = 2;
-const DefaultState ={
-  selectedParagraph:"",
+const DefaultState = {
+  selectedParagraph:" ",
   timeStarted:false,
   timeRemaining: totalTime,
   words:0,
@@ -22,10 +23,33 @@ const DefaultState ={
 class App extends React.Component{
 
   state = DefaultState;
+  
+  fetchNewParagraphFallback = () => {
+    const data = SAMPLE_PARAGRAPHS[
+    Math.floor(Math.random()*SAMPLE_PARAGRAPHS.length)
+    ]
+    const selectedParagraphArray = data.split("");
+    // console.log( "splitted para -",selectedParagraphArray)
+    const testInfo = selectedParagraphArray.map((selectedLetter)=>{
+      return {
+        testLetter:selectedLetter,
+        status:"notAttempted",
+      };
+    })
+    this.setState({
+      ...DefaultState,
+      testInfo,
+      selectedParagraph:data
+    });
 
+    
+  }
 
   fetchNewParagraph = () => { 
- 
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+});
     fetch(paraURL)
     .then((response)=>response.text())
     .then((data)=>{
@@ -49,7 +73,7 @@ class App extends React.Component{
 
   componentDidMount (){
  
-    this.fetchNewParagraph();
+    this.fetchNewParagraphFallback();
 
   }
 
@@ -75,7 +99,7 @@ setTimer = () => {
     }, 1000);
 }
 
-startAgain = () => this.fetchNewParagraph();
+startAgain = () => this.fetchNewParagraphFallback();
 
 
    handleUserInput = (inputValue) => {
@@ -123,10 +147,10 @@ startAgain = () => this.fetchNewParagraph();
             testInfo[index+1].status = "notAttempted"; 
 
         // check for the correct typed letter
-        const isCorrect = inputValue[index]===testInfo[index].testLetter;
+        const isCorrect = inputValue[index] === testInfo[index].testLetter;
 
         // update the testInfo
-        testInfo[index].status = isCorrect ? "correct" : "inCorrect";
+        testInfo[index].status = isCorrect ? "correct" : "incorrect";
 
         // update the state
         this.setState({
@@ -175,6 +199,9 @@ startAgain = () => this.fetchNewParagraph();
 
         {/* Footer */}
         <Footer />
+
+        
+        
         </div>
       );
     }
