@@ -25,6 +25,10 @@ class App extends React.Component{
   state = DefaultState;
   
   fetchNewParagraphFallback = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     const data = SAMPLE_PARAGRAPHS[
     Math.floor(Math.random()*SAMPLE_PARAGRAPHS.length)
     ]
