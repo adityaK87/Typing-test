@@ -41,8 +41,9 @@ margin: 16px;
     display: flex;
     width: 50%;
     flex-grow: 1;
-    margin: 0 9px 0px 0px;
+    margin: 0 9px 0px 9px;
 }
+
 .textarea{
     text-align: left;
     flex-grow: 1;
@@ -53,12 +54,13 @@ margin: 16px;
     flex-wrap:wrap  ;
     box-shadow: 0 1px 3px rgba(0 , 0 , 0 ,0.12) , 0 1px 3px rgba(0 , 0 , 0 ,0.12)  ; 
     transition: all 0.2s;
+    border-radius: 10px;
+    overflow-y: scroll;
+    font-size: 15px;
+    line-height: 15px;
 }
 
-.textarea{
-    box-shadow: 0 14px 28px rgba(0 , 0 , 0 ,0.12) , 0 10px 10px rgba(0 , 0 , 0 ,0.12)  ; 
-    border-radius: 10px;
-}
+
 
 .test-paragraph{
     font-size: 12px;
@@ -72,6 +74,21 @@ margin: 16px;
     .textarea-container{
         display: flex;
         width: 95%;
+    }
+   
+}
+@media only screen and (max-width: 400px)  {
+    .textarea-container{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        height: 870px;
+    }
+
+    .textarea-left,
+    .textarea-right{
+    display: flex;
+    width: 90%;
     }
    
 }
