@@ -1,14 +1,14 @@
 import React from 'react';
 import './Navbar.css'
 import logo from '../logo&img/logo.png'
-// import gitLogo from '../logo&img/gitLogo1.png'
+import gitLogo from '../logo&img/gitLogo1.png'
 
 const Navbar=()=>{
     
     return(
         <div className='nav-container'>
             <div className="nav-left">
-                <img className="nav-logo"  src ="../logo&img/logo.png" alt="logo" />
+                <img className="nav-logo"  src = {logo} alt="logo" />
                 <p className="nav-logo-text"> <i>Typing Test</i></p>
             </div>
             
