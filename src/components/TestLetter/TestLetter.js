@@ -1,15 +1,15 @@
 import React from 'react';
 import './TestLetter.css'
 
-const TestLetter =  ({individualLetterInfo}) => { 
-    const {status} = individualLetterInfo;
+const TestLetter = ({ individualLetterInfo }) => {
+    const { status } = individualLetterInfo;
     // let statusClass; 
 
 
     const statusClass = {
-        correct:"test-letter-correct",
-        incorrect:"test-letter-incorrect",
-        notAttempted:"test-letter-not-attempted"
+        correct: "test-letter-correct",
+        incorrect: "test-letter-incorrect",
+        notAttempted: "test-letter-not-attempted"
     }[status]
 
     // if(status === "correct"){
@@ -21,10 +21,10 @@ const TestLetter =  ({individualLetterInfo}) => {
     // }
 
     // console.log(individualLetter)
-    return(
-       <span className= {`test-letter ${statusClass}`}>
+    return (
+        <span className={`test-letter ${statusClass}`}>
             {individualLetterInfo.testLetter}
-       </span>
+        </span>
     );
 }
 export default TestLetter;

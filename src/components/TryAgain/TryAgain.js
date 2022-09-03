@@ -17,7 +17,8 @@ const TryAgain = ({ words, characters, wpm, startAgain }) => {
             </div>
 
         </div>
-    );}
+    );
+}
 export default TryAgain;
 
 // This TryAgain.jsx component is child component of TestContainer.jsx
