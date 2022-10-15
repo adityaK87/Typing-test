@@ -48,6 +48,7 @@ class App extends React.Component {
 
 
   }
+  //This paragraph is getting from api 
 
   fetchNewParagraph = () => {
 
@@ -178,7 +179,7 @@ class App extends React.Component {
     return (
       <div className='App'>
         {/* NavBar */}
-        <Navbar />
+        <Navbar title="Typing Test" />
 
         {/* LandingPage */}
         <LandingPage />
@@ -195,7 +196,7 @@ class App extends React.Component {
           onInputChange={this.handleUserInput}
           startAgain={this.startAgain}
         />
-           
+
         {/* Footer */}
         <Footer />
       </div>

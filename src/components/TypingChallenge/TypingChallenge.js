@@ -8,7 +8,7 @@ const TypingChallenge = ({
     timeRemaining,
     testInfo,
     onInputChange }) => {
-    console.log("inside typing challenge -", testInfo)
+    // console.log("inside typing challenge -", testInfo)
     return (
         <div className='typing-cahallege'>
             <div className="timer-section">

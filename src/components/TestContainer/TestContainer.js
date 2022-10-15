@@ -42,7 +42,7 @@ const TestContainer = ({
                     />
                 </div>
             )
-            };
+            }
         </div>
     );
 }

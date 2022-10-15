@@ -38,7 +38,7 @@ const TypingChallengeContainer = ({
                 />
             </div>
         </div>
-    );
+    )
 
 }
 export default TypingChallengeContainer;
