@@ -1,22 +1,22 @@
-.footer-container{
-text-align: center;
+.footer-container {
+  text-align: center;
 }
 
-
-.footer-container:hover{
-    background-color: orange;
-   
+.footer-container:hover {
+  color: #000;
 }
-.footer-container a{
+.footer-container a {
   text-decoration: none;
 }
 
-.footer-link{
- color: #eee2ee;
- font-size: 25px;
- 
+.footer-link {
+  color: #eee2ee;
+  font-size: 25px;
 }
 
-.footer-link:hover{
-    color: black;
+.footer-link:hover {
+  color: black;
+}
+.fa {
+  color: red;
 }
