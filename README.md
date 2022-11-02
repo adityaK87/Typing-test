@@ -12,7 +12,7 @@ Having a good typing speed will always help you as a developer! Here, I present 
 
 <img src="https://img.shields.io/badge/website-up-greene" />
 
-<pre><center><a href="https://test-typing-speed.herokuapp.com/"><b>test-typing-speed.herokuapp.com</b></a></center></pre>
+<pre><center><a href="https://adityapal87.github.io/Typing-test/"><b>adityapal87.github.io/Typing-test/</b></a></center></pre>
 
 ## 👨‍💻 Tech Stack Used
 
