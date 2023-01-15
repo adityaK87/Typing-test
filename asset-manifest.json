@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Typing-test/static/css/main.a5b28782.css",
-    "main.js": "/Typing-test/static/js/main.7c142d08.js",
+    "main.js": "/Typing-test/static/js/main.18abd946.js",
     "static/media/typing.png": "/Typing-test/static/media/typing.cb9bc3a0311a9834bc03.png",
     "static/media/logo.png": "/Typing-test/static/media/logo.da472bd7aaab38d17cde.png",
     "index.html": "/Typing-test/index.html",
     "main.a5b28782.css.map": "/Typing-test/static/css/main.a5b28782.css.map",
-    "main.7c142d08.js.map": "/Typing-test/static/js/main.7c142d08.js.map"
+    "main.18abd946.js.map": "/Typing-test/static/js/main.18abd946.js.map"
   },
   "entrypoints": [
     "static/css/main.a5b28782.css",
-    "static/js/main.7c142d08.js"
+    "static/js/main.18abd946.js"
   ]
 }
