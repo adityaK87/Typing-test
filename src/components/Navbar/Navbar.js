@@ -15,7 +15,7 @@ const Navbar = (props) => {
 
             <div className="nav-right">
                 <a
-                    href="https://github.com/adityapal87"
+                    href="https://github.com/adityaK87"
                     target="_blank"
                     className="nav-git-link"
                     rel='noreferrer'
@@ -34,8 +34,3 @@ Navbar.propTypes = {
     title: PropTypes.string.isRequired
 }
 
-
-//if we forget to pass any props
-// Navbar.defaultProps = {
-//     title: 'Typing Test'
-// }

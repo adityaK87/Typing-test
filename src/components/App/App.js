@@ -24,7 +24,7 @@ class App extends React.Component {
 
   state = DefaultState;
 
-  fetchNewParagraphFallback = () => {
+  fetchNewParagraphFallback = () => { // In case api doesn't work
     window.scrollTo({
       top: 0,
       behavior: "smooth"
@@ -33,7 +33,6 @@ class App extends React.Component {
       Math.floor(Math.random() * SAMPLE_PARAGRAPHS.length)
     ]
     const selectedParagraphArray = data.split("");
-    // console.log( "splitted para -",selectedParagraphArray)
     const testInfo = selectedParagraphArray.map((selectedLetter) => {
       return {
         testLetter: selectedLetter,
@@ -43,9 +42,8 @@ class App extends React.Component {
     this.setState({
       ...DefaultState,
       testInfo,
-      selectedParagraph: data
+      selectedParagraph: data,
     });
-
 
   }
   //This paragraph is getting from api 
@@ -107,7 +105,9 @@ class App extends React.Component {
 
   handleUserInput = (inputValue) => {
     // console.log(inputValue) 
-    if (!this.state.timeStarted) this.setTimer()
+    if (!this.state.timeStarted) {
+      this.setTimer()
+    }
     /**
        * 1. Handle the underflow case - all characters should be shown as not-attempted
        * 2. Handle the overflow case - early exit
@@ -140,7 +140,6 @@ class App extends React.Component {
       });
       return;
     }
-
     if (index >= this.state.selectedParagraph.length) {
       this.setState({ characters, words })
       return;
@@ -163,6 +162,7 @@ class App extends React.Component {
       characters
     });
   }
+
 
   render() {
     // console.log("Test Info -", this.state.testInfo);

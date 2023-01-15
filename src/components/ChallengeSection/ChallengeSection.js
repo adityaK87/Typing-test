@@ -12,7 +12,7 @@ const ChallengeSection = ({
     testInfo,
     onInputChange,
     startAgain }) => {
-    console.log(selectedParagraph);
+    // console.log(selectedParagraph);
 
     return (
 
