@@ -1,4 +1,4 @@
-# [Typing-Test](https://test-typing-speed.herokuapp.com/)
+# [Typing-Test](https://adityak87.github.io/Typing-test/)
 
 ![Name-it](https://raw.githubusercontent.com/adityaK87/My-Portfolio/main/src/assets/typing-test.png)
 
